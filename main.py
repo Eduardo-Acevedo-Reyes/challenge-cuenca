@@ -7,16 +7,14 @@ import uvicorn
 
 app = FastAPI()
 
-# Store conversations in memory (in-memory cache)
 conversations: Dict[str, List[Dict[str, str]]] = defaultdict(list)
 
-# Define topic and bot's position when starting a new conversation
 def start_new_conversation() -> (str, str, str):
     topic = "La Tierra es plana"
     stance = "La Tierra no es una esfera, es completamente plana y lo puedo demostrar."
     return str(uuid4()), topic, stance
 
-# Schema for input
+
 class MessageInput(BaseModel):
     conversation_id: Optional[str] = None
     message: str
