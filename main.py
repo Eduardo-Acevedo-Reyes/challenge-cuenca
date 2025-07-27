@@ -18,7 +18,7 @@ def start_new_conversation() -> (str, str, str):
 
 # Schema for input
 class MessageInput(BaseModel):
-    conversation_id: Optional[str]
+    conversation_id: Optional[str] = None
     message: str
 
 # Schema for response
