@@ -1,55 +1,13 @@
-# Kopi Chatbot API
+# Kopi Challenge – Chatbot API
 
-## Descripción
-Este proyecto expone una API que sostiene un debate tomando una postura definida, intentando convencer al usuario.
+Este proyecto es una API que permite simular un chatbot capaz de sostener un debate con una postura fija sobre cualquier tema proporcionado por el usuario. El bot responde de manera persuasiva, defiende su punto de vista y mantiene la coherencia a lo largo de múltiples intercambios.
 
-## Instalación
-```bash
-make install
-```
 
-## Ejecución local
-```bash
-make run
-```
+### `POST /chat`
 
-## Detener servicios
-```bash
-make down
-```
-
-## Eliminar contenedores y volúmenes
-```bash
-make clean
-```
-
-## Variables de Entorno
-Actualmente no hay variables necesarias, pero puedes agregar soporte en `main.py` fácilmente.
-
-## Ejemplo de request inicial (nuevo debate)
+#### Request:
 ```json
 {
   "conversation_id": null,
-  "message": "No creo que la Tierra sea plana"
+  "message": "Los fantasmas no existen"
 }
-```
-
-## Ejemplo de respuesta
-```json
-{
-  "conversation_id": "123e4567-e89b-12d3-a456-426614174000",
-  "message": [
-    {"role": "user", "message": "No creo que la Tierra sea plana"},
-    {"role": "bot", "message": "La Tierra no es una esfera, es completamente plana y lo puedo demostrar."}
-  ]
-}
-```
-
-## Pruebas
-```bash
-make test
-```
-
-## Entrega
-- URL pública donde se puede probar la API
-- Archivo `.tar.gz` del repo con historial de commits
