@@ -11,3 +11,14 @@ Este proyecto es una API que permite simular un chatbot capaz de sostener un deb
   "conversation_id": null,
   "message": "Los fantasmas no existen"
 }
+
+
+####. Respinse:
+
+{
+  "conversation_id": "uuid-generado",
+  "message": [
+    {"role": "user", "message": "Los fantasmas no existen"},
+    {"role": "bot", "message": "Estoy totalmente en contra de esta idea."}
+  ]
+}
